@@ -4055,6 +4055,22 @@ p.checkout-coupon input[type=text]:focus {
   width: 100%;
 }
 
+.dashed-line {
+  flex: 1;
+  border-top: 1px dashed #ebebeb;
+  margin: 0 10px;
+}
+
+.doc-link {
+  font-size: 14px;
+  color: #222;
+  padding: 0;
+  border: none;
+}
+.doc-link:hover {
+  color: #21327A;
+}
+
 /*----------------------------------------*/
 /*  07. SALE CSS START
 /*----------------------------------------*/
