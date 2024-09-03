@@ -1089,3 +1089,36 @@
 	
 		
 })(jQuery);
+
+$(function() {
+	var token = "ce36f34b084784645a69ee7008ee83a72857b2ae";
+	var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
+
+	$("#city-input").autocomplete({
+		source: function(request, response) {
+			var options = {
+				method: "POST",
+				mode: "cors",
+				headers: {
+					"Content-Type": "application/json",
+					"Accept": "application/json",
+					"Authorization": "Token " + token
+				},
+				body: JSON.stringify({query: request.term, count: 10})
+			};
+
+			fetch(url, options)
+				.then(res => res.json())
+				.then(data => {
+					response($.map(data.suggestions, function(item) {
+						return {
+							label: item.value,
+							value: item.value
+						};
+					}));
+				})
+				.catch(error => console.log("error", error));
+		},
+		minLength: 2
+	});
+});

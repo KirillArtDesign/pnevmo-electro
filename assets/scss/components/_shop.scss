@@ -2110,3 +2110,26 @@ p.checkout-coupon input[type="text"] {
 .order-button-payment button {
   width: 100%;
 }
+
+.dashed-line {
+    flex: 1;
+    border-top: 1px dashed #ebebeb;
+    margin: 0 10px;
+}
+
+.doc-link {
+    font-size: 14px;
+    color: $black;
+    padding: 0;
+    border: none;
+
+    &:hover { 
+        color: $t-blue;
+    }
+}
+
+.search-price{
+    font-size: 20px;
+    color:  #21327A;
+    font-weight: 500;
+}
