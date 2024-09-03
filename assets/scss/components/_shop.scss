@@ -2133,3 +2133,20 @@ p.checkout-coupon input[type="text"] {
     color:  #21327A;
     font-weight: 500;
 }
+
+.fixed-width {
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .table {
+        th.fixed-width:first-child {
+            width: 150px;
+            min-width: 150px;
+            max-width: 150px;
+        }
+    }
+}
